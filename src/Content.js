@@ -7,11 +7,21 @@ const Content = () => {
         return names[int];
     }
 
+    const handleclick = (name) => {
+        console.log('You clicked it !')
+    }
+
+    const handleclick2 = (name) => {
+        console.log(`${name} was clicked`)
+    }
+
     return (
         <main>
             <p>
                 Hi {handleNameChange()}!
             </p>
+            <button onClick={handleclick}>Click it</button>
+            <button onClick={() => handleclick2(`WarDailer`)}>Click it</button>
         </main>
     )
 }
